@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>’Mohamed Ebrahim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background: #003366;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            animation: fadeIn 1s ease-out;
+        }
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #66ccff;
+        }
+        .container {
+            padding: 5rem 2rem 2rem;
+            animation: slideIn 1s ease-out;
+        }
+        .section {
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        .section:nth-child(odd) {
+            animation-delay: 0.5s;
+        }
+        .section:nth-child(even) {
+            animation-delay: 1s;
+        }
+        .section h2 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .section h2:hover {
+            color: #66ccff;
+        }
+        .project {
+            margin-bottom: 1.5rem;
+            background: #002244;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .project img {
+            width: 100%;
+            border-radius: 5px;
+            transition: opacity 0.3s ease;
+        }
+        .project img:hover {
+            opacity: 0.8;
+        }
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            animation: fadeIn 1s ease-out;
+        }
+        .scroll-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .scroll-button:hover {
+            background: #66ccff;
+            transform: scale(1.1);
+        }
+        .scroll-button:active {
+            transform: scale(0.9);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>  My Portfolio </h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact"> Contact me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about" class="section">
+            <h2>عنّي</h2>
+            <p>مرحباً! أنا [محمد ابراهيم ]، مطور برمجيات متخصص في [تطوير تطبيفات الاندرويد]. لدي شغف بتطوير حلول برمجية مبتكرة وتطبيق أحدث التقنيات. في هذه الصفحة، ستجد معلومات حول مشاريعي السابقة والخبرات التي اكتسبتها على مر السنوات.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>مشاريعي</h2>
+            <div class="project">
+                <img src="https://via.placeholder.com/800x400?text=مشروع+1" alt=" Ecommercr App">
+                <h3>Ecommerce App</h3>
+                <p> Ecommerce App is an applicaton for buying and selling </p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/800x400?text=مشروع+2" alt="Resturant app">
+                <h3> Resturant App </h3>
+                <p> this app for resturant to make communcation easer between customers and resturant easer/p>
+            </div>
+            <!-- أضف المزيد من المشاريع هنا -->
+        </section>
+        <section id="contact" class="section">
+            <h2>اتصل بي</h2>
+            <p>يمكنك الاتصال بي عبر البريد الإلكتروني: <a href="mailto:zad4036@gmail.com">zad4036@gmail.com</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة لـ [اندروتك]</p>
+    </footer>
+    <button class="scroll-button" onclick="scrollToTop()">↑</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
